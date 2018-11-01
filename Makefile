@@ -1,4 +1,4 @@
-default: simulation
+default: simple-cluster
 
-simulation:
-	go build -o ./bin/simulation ./main/simulation.go
+simple-cluster:
+	go build -o ./bin/simple-cluster ./main/main.go
