@@ -55,6 +55,7 @@ func (m Master) doMerge(jobName string, outFile string, nReduce int) {
 	for reduceID := 0; reduceID < nReduce; reduceID ++ {
 		reduceFD, _ := os.OpenFile(reduceFileName(jobName, m.Host, reduceID), os.O_RDONLY, 0666)
 		data, _ := ioutil.ReadAll(reduceFD)
+		fmt.Print(string(data))
 		outFD.Write(data)
 	}
 }
